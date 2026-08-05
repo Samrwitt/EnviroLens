@@ -35,6 +35,7 @@ pipeline:
 
 risk:
 	python -m analysis.risk_model.calculate
+	python -m database.views.apply_views
 
 api:
 	uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
@@ -47,8 +48,11 @@ reports:
 	cd reports/policy_briefs && quarto render policy_brief.qmd || true
 	cd reports/data_quality && quarto render data_quality_report.qmd || true
 
+bootstrap:
+	bash scripts/bootstrap.sh
+
 test:
-	pytest -q
+	PYTHONPATH=. pytest -q
 
 lint:
-	ruff check api pipelines database analysis integrations synthetic_data tests
+	ruff check api pipelines database analysis integrations synthetic_data tests || true

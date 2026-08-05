@@ -1,0 +1,289 @@
+community_code,district_code,period_code,indicator_code,indicator_name,value,unit
+VR-N-D01-C01,VR-N-D01,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.366,index_0_1
+VR-N-D01-C01,VR-N-D01,2024Q1,URBANIZATION,Urbanization share,0.181,proportion
+VR-N-D01-C02,VR-N-D01,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.243,index_0_1
+VR-N-D01-C02,VR-N-D01,2024Q1,URBANIZATION,Urbanization share,0.777,proportion
+VR-N-D01-C03,VR-N-D01,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.247,index_0_1
+VR-N-D01-C03,VR-N-D01,2024Q1,URBANIZATION,Urbanization share,0.686,proportion
+VR-N-D02-C01,VR-N-D02,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.5,index_0_1
+VR-N-D02-C01,VR-N-D02,2024Q1,URBANIZATION,Urbanization share,0.125,proportion
+VR-N-D02-C02,VR-N-D02,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.208,index_0_1
+VR-N-D02-C02,VR-N-D02,2024Q1,URBANIZATION,Urbanization share,0.252,proportion
+VR-N-D02-C03,VR-N-D02,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.31,index_0_1
+VR-N-D02-C03,VR-N-D02,2024Q1,URBANIZATION,Urbanization share,0.14,proportion
+VR-N-D03-C01,VR-N-D03,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.394,index_0_1
+VR-N-D03-C01,VR-N-D03,2024Q1,URBANIZATION,Urbanization share,0.63,proportion
+VR-N-D03-C02,VR-N-D03,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.316,index_0_1
+VR-N-D03-C02,VR-N-D03,2024Q1,URBANIZATION,Urbanization share,0.775,proportion
+VR-N-D03-C03,VR-N-D03,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.202,index_0_1
+VR-N-D03-C03,VR-N-D03,2024Q1,URBANIZATION,Urbanization share,0.248,proportion
+VR-N-D04-C01,VR-N-D04,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.415,index_0_1
+VR-N-D04-C01,VR-N-D04,2024Q1,URBANIZATION,Urbanization share,0.315,proportion
+VR-N-D04-C02,VR-N-D04,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.346,index_0_1
+VR-N-D04-C02,VR-N-D04,2024Q1,URBANIZATION,Urbanization share,0.877,proportion
+VR-N-D04-C03,VR-N-D04,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.389,index_0_1
+VR-N-D04-C03,VR-N-D04,2024Q1,URBANIZATION,Urbanization share,0.794,proportion
+VR-C-D01-C01,VR-C-D01,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.665,index_0_1
+VR-C-D01-C01,VR-C-D01,2024Q1,URBANIZATION,Urbanization share,0.502,proportion
+VR-C-D01-C02,VR-C-D01,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.219,index_0_1
+VR-C-D01-C02,VR-C-D01,2024Q1,URBANIZATION,Urbanization share,0.238,proportion
+VR-C-D01-C03,VR-C-D01,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.391,index_0_1
+VR-C-D01-C03,VR-C-D01,2024Q1,URBANIZATION,Urbanization share,0.448,proportion
+VR-C-D02-C01,VR-C-D02,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.669,index_0_1
+VR-C-D02-C01,VR-C-D02,2024Q1,URBANIZATION,Urbanization share,0.154,proportion
+VR-C-D02-C02,VR-C-D02,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.411,index_0_1
+VR-C-D02-C02,VR-C-D02,2024Q1,URBANIZATION,Urbanization share,0.729,proportion
+VR-C-D02-C03,VR-C-D02,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.234,index_0_1
+VR-C-D02-C03,VR-C-D02,2024Q1,URBANIZATION,Urbanization share,0.707,proportion
+VR-C-D03-C01,VR-C-D03,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.313,index_0_1
+VR-C-D03-C01,VR-C-D03,2024Q1,URBANIZATION,Urbanization share,0.375,proportion
+VR-C-D03-C02,VR-C-D03,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.171,index_0_1
+VR-C-D03-C02,VR-C-D03,2024Q1,URBANIZATION,Urbanization share,0.215,proportion
+VR-C-D03-C03,VR-C-D03,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.339,index_0_1
+VR-C-D03-C03,VR-C-D03,2024Q1,URBANIZATION,Urbanization share,0.697,proportion
+VR-C-D04-C01,VR-C-D04,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.323,index_0_1
+VR-C-D04-C01,VR-C-D04,2024Q1,URBANIZATION,Urbanization share,0.493,proportion
+VR-C-D04-C02,VR-C-D04,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.705,index_0_1
+VR-C-D04-C02,VR-C-D04,2024Q1,URBANIZATION,Urbanization share,0.761,proportion
+VR-C-D04-C03,VR-C-D04,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.27,index_0_1
+VR-C-D04-C03,VR-C-D04,2024Q1,URBANIZATION,Urbanization share,0.693,proportion
+VR-S-D01-C01,VR-S-D01,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.241,index_0_1
+VR-S-D01-C01,VR-S-D01,2024Q1,URBANIZATION,Urbanization share,0.505,proportion
+VR-S-D01-C02,VR-S-D01,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.26,index_0_1
+VR-S-D01-C02,VR-S-D01,2024Q1,URBANIZATION,Urbanization share,0.77,proportion
+VR-S-D01-C03,VR-S-D01,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.306,index_0_1
+VR-S-D01-C03,VR-S-D01,2024Q1,URBANIZATION,Urbanization share,0.504,proportion
+VR-S-D02-C01,VR-S-D02,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.489,index_0_1
+VR-S-D02-C01,VR-S-D02,2024Q1,URBANIZATION,Urbanization share,0.796,proportion
+VR-S-D02-C02,VR-S-D02,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.577,index_0_1
+VR-S-D02-C02,VR-S-D02,2024Q1,URBANIZATION,Urbanization share,0.328,proportion
+VR-S-D02-C03,VR-S-D02,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.639,index_0_1
+VR-S-D02-C03,VR-S-D02,2024Q1,URBANIZATION,Urbanization share,0.642,proportion
+VR-S-D03-C01,VR-S-D03,2024Q1,POVERTY_INDEX,Multidimensional poverty index,,index_0_1
+VR-S-D03-C01,VR-S-D03,2024Q1,URBANIZATION,Urbanization share,0.829,proportion
+VR-S-D03-C02,VR-S-D03,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.609,index_0_1
+VR-S-D03-C02,VR-S-D03,2024Q1,URBANIZATION,Urbanization share,0.874,proportion
+VR-S-D03-C03,VR-S-D03,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.294,index_0_1
+VR-S-D03-C03,VR-S-D03,2024Q1,URBANIZATION,Urbanization share,0.642,proportion
+VR-S-D04-C01,VR-S-D04,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.528,index_0_1
+VR-S-D04-C01,VR-S-D04,2024Q1,URBANIZATION,Urbanization share,0.399,proportion
+VR-S-D04-C02,VR-S-D04,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.186,index_0_1
+VR-S-D04-C02,VR-S-D04,2024Q1,URBANIZATION,Urbanization share,0.612,proportion
+VR-S-D04-C03,VR-S-D04,2024Q1,POVERTY_INDEX,Multidimensional poverty index,0.32,index_0_1
+VR-S-D04-C03,VR-S-D04,2024Q1,URBANIZATION,Urbanization share,0.712,proportion
+VR-N-D01-C01,VR-N-D01,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.527,index_0_1
+VR-N-D01-C01,VR-N-D01,2024Q2,URBANIZATION,Urbanization share,0.677,proportion
+VR-N-D01-C02,VR-N-D01,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.371,index_0_1
+VR-N-D01-C02,VR-N-D01,2024Q2,URBANIZATION,Urbanization share,0.666,proportion
+VR-N-D01-C03,VR-N-D01,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.455,index_0_1
+VR-N-D01-C03,VR-N-D01,2024Q2,URBANIZATION,Urbanization share,0.825,proportion
+VR-N-D02-C01,VR-N-D02,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.65,index_0_1
+VR-N-D02-C01,VR-N-D02,2024Q2,URBANIZATION,Urbanization share,0.178,proportion
+VR-N-D02-C02,VR-N-D02,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.254,index_0_1
+VR-N-D02-C02,VR-N-D02,2024Q2,URBANIZATION,Urbanization share,0.369,proportion
+VR-N-D02-C03,VR-N-D02,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.599,index_0_1
+VR-N-D02-C03,VR-N-D02,2024Q2,URBANIZATION,Urbanization share,0.308,proportion
+VR-N-D03-C01,VR-N-D03,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.483,index_0_1
+VR-N-D03-C01,VR-N-D03,2024Q2,URBANIZATION,Urbanization share,0.157,proportion
+VR-N-D03-C02,VR-N-D03,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.32,index_0_1
+VR-N-D03-C02,VR-N-D03,2024Q2,URBANIZATION,Urbanization share,0.783,proportion
+VR-N-D03-C03,VR-N-D03,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.667,index_0_1
+VR-N-D03-C03,VR-N-D03,2024Q2,URBANIZATION,Urbanization share,0.353,proportion
+VR-N-D04-C01,VR-N-D04,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.251,index_0_1
+VR-N-D04-C01,VR-N-D04,2024Q2,URBANIZATION,Urbanization share,0.104,proportion
+VR-N-D04-C02,VR-N-D04,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.429,index_0_1
+VR-N-D04-C02,VR-N-D04,2024Q2,URBANIZATION,Urbanization share,0.17,proportion
+VR-N-D04-C03,VR-N-D04,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.368,index_0_1
+VR-N-D04-C03,VR-N-D04,2024Q2,URBANIZATION,Urbanization share,0.26,proportion
+VR-C-D01-C01,VR-C-D01,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.259,index_0_1
+VR-C-D01-C01,VR-C-D01,2024Q2,URBANIZATION,Urbanization share,0.601,proportion
+VR-C-D01-C02,VR-C-D01,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.369,index_0_1
+VR-C-D01-C02,VR-C-D01,2024Q2,URBANIZATION,Urbanization share,0.234,proportion
+VR-C-D01-C03,VR-C-D01,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.49,index_0_1
+VR-C-D01-C03,VR-C-D01,2024Q2,URBANIZATION,Urbanization share,0.81,proportion
+VR-C-D02-C01,VR-C-D02,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.257,index_0_1
+VR-C-D02-C01,VR-C-D02,2024Q2,URBANIZATION,Urbanization share,0.835,proportion
+VR-C-D02-C02,VR-C-D02,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.568,index_0_1
+VR-C-D02-C02,VR-C-D02,2024Q2,URBANIZATION,Urbanization share,0.235,proportion
+VR-C-D02-C03,VR-C-D02,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.296,index_0_1
+VR-C-D02-C03,VR-C-D02,2024Q2,URBANIZATION,Urbanization share,0.139,proportion
+VR-C-D03-C01,VR-C-D03,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.543,index_0_1
+VR-C-D03-C01,VR-C-D03,2024Q2,URBANIZATION,Urbanization share,0.404,proportion
+VR-C-D03-C02,VR-C-D03,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.509,index_0_1
+VR-C-D03-C02,VR-C-D03,2024Q2,URBANIZATION,Urbanization share,0.629,proportion
+VR-C-D03-C03,VR-C-D03,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.623,index_0_1
+VR-C-D03-C03,VR-C-D03,2024Q2,URBANIZATION,Urbanization share,0.675,proportion
+VR-C-D04-C01,VR-C-D04,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.264,index_0_1
+VR-C-D04-C01,VR-C-D04,2024Q2,URBANIZATION,Urbanization share,0.519,proportion
+VR-C-D04-C02,VR-C-D04,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.433,index_0_1
+VR-C-D04-C02,VR-C-D04,2024Q2,URBANIZATION,Urbanization share,0.846,proportion
+VR-C-D04-C03,VR-C-D04,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.626,index_0_1
+VR-C-D04-C03,VR-C-D04,2024Q2,URBANIZATION,Urbanization share,0.219,proportion
+VR-S-D01-C01,VR-S-D01,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.296,index_0_1
+VR-S-D01-C01,VR-S-D01,2024Q2,URBANIZATION,Urbanization share,0.891,proportion
+VR-S-D01-C02,VR-S-D01,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.172,index_0_1
+VR-S-D01-C02,VR-S-D01,2024Q2,URBANIZATION,Urbanization share,0.741,proportion
+VR-S-D01-C03,VR-S-D01,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.176,index_0_1
+VR-S-D01-C03,VR-S-D01,2024Q2,URBANIZATION,Urbanization share,0.631,proportion
+VR-S-D02-C01,VR-S-D02,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.651,index_0_1
+VR-S-D02-C01,VR-S-D02,2024Q2,URBANIZATION,Urbanization share,0.752,proportion
+VR-S-D02-C02,VR-S-D02,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.37,index_0_1
+VR-S-D02-C02,VR-S-D02,2024Q2,URBANIZATION,Urbanization share,0.74,proportion
+VR-S-D02-C03,VR-S-D02,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.183,index_0_1
+VR-S-D02-C03,VR-S-D02,2024Q2,URBANIZATION,Urbanization share,0.228,proportion
+VR-S-D03-C01,VR-S-D03,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.253,index_0_1
+VR-S-D03-C01,VR-S-D03,2024Q2,URBANIZATION,Urbanization share,0.387,proportion
+VR-S-D03-C02,VR-S-D03,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.224,index_0_1
+VR-S-D03-C02,VR-S-D03,2024Q2,URBANIZATION,Urbanization share,0.19,proportion
+VR-S-D03-C03,VR-S-D03,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.552,index_0_1
+VR-S-D03-C03,VR-S-D03,2024Q2,URBANIZATION,Urbanization share,0.714,proportion
+VR-S-D04-C01,VR-S-D04,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.343,index_0_1
+VR-S-D04-C01,VR-S-D04,2024Q2,URBANIZATION,Urbanization share,0.66,proportion
+VR-S-D04-C02,VR-S-D04,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.535,index_0_1
+VR-S-D04-C02,VR-S-D04,2024Q2,URBANIZATION,Urbanization share,0.771,proportion
+VR-S-D04-C03,VR-S-D04,2024Q2,POVERTY_INDEX,Multidimensional poverty index,0.239,index_0_1
+VR-S-D04-C03,VR-S-D04,2024Q2,URBANIZATION,Urbanization share,0.781,proportion
+VR-N-D01-C01,VR-N-D01,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.703,index_0_1
+VR-N-D01-C01,VR-N-D01,2024Q3,URBANIZATION,Urbanization share,0.278,proportion
+VR-N-D01-C02,VR-N-D01,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.607,index_0_1
+VR-N-D01-C02,VR-N-D01,2024Q3,URBANIZATION,Urbanization share,0.785,proportion
+VR-N-D01-C03,VR-N-D01,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.209,index_0_1
+VR-N-D01-C03,VR-N-D01,2024Q3,URBANIZATION,Urbanization share,0.546,proportion
+VR-N-D02-C01,VR-N-D02,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.324,index_0_1
+VR-N-D02-C01,VR-N-D02,2024Q3,URBANIZATION,Urbanization share,0.265,proportion
+VR-N-D02-C02,VR-N-D02,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.277,index_0_1
+VR-N-D02-C02,VR-N-D02,2024Q3,URBANIZATION,Urbanization share,0.548,proportion
+VR-N-D02-C03,VR-N-D02,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.215,index_0_1
+VR-N-D02-C03,VR-N-D02,2024Q3,URBANIZATION,Urbanization share,0.277,proportion
+VR-N-D03-C01,VR-N-D03,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.448,index_0_1
+VR-N-D03-C01,VR-N-D03,2024Q3,URBANIZATION,Urbanization share,0.137,proportion
+VR-N-D03-C02,VR-N-D03,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.211,index_0_1
+VR-N-D03-C02,VR-N-D03,2024Q3,URBANIZATION,Urbanization share,0.25,proportion
+VR-N-D03-C03,VR-N-D03,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.559,index_0_1
+VR-N-D03-C03,VR-N-D03,2024Q3,URBANIZATION,Urbanization share,0.432,proportion
+VR-N-D04-C01,VR-N-D04,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.407,index_0_1
+VR-N-D04-C01,VR-N-D04,2024Q3,URBANIZATION,Urbanization share,0.865,proportion
+VR-N-D04-C02,VR-N-D04,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.683,index_0_1
+VR-N-D04-C02,VR-N-D04,2024Q3,URBANIZATION,Urbanization share,0.486,proportion
+VR-N-D04-C03,VR-N-D04,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.566,index_0_1
+VR-N-D04-C03,VR-N-D04,2024Q3,URBANIZATION,Urbanization share,0.41,proportion
+VR-C-D01-C01,VR-C-D01,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.708,index_0_1
+VR-C-D01-C01,VR-C-D01,2024Q3,URBANIZATION,Urbanization share,0.71,proportion
+VR-C-D01-C02,VR-C-D01,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.226,index_0_1
+VR-C-D01-C02,VR-C-D01,2024Q3,URBANIZATION,Urbanization share,0.66,proportion
+VR-C-D01-C03,VR-C-D01,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.556,index_0_1
+VR-C-D01-C03,VR-C-D01,2024Q3,URBANIZATION,Urbanization share,0.606,proportion
+VR-C-D02-C01,VR-C-D02,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.533,index_0_1
+VR-C-D02-C01,VR-C-D02,2024Q3,URBANIZATION,Urbanization share,0.62,proportion
+VR-C-D02-C02,VR-C-D02,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.216,index_0_1
+VR-C-D02-C02,VR-C-D02,2024Q3,URBANIZATION,Urbanization share,0.484,proportion
+VR-C-D02-C03,VR-C-D02,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.63,index_0_1
+VR-C-D02-C03,VR-C-D02,2024Q3,URBANIZATION,Urbanization share,0.778,proportion
+VR-C-D03-C01,VR-C-D03,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.532,index_0_1
+VR-C-D03-C01,VR-C-D03,2024Q3,URBANIZATION,Urbanization share,0.7,proportion
+VR-C-D03-C02,VR-C-D03,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.544,index_0_1
+VR-C-D03-C02,VR-C-D03,2024Q3,URBANIZATION,Urbanization share,0.703,proportion
+VR-C-D03-C03,VR-C-D03,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.572,index_0_1
+VR-C-D03-C03,VR-C-D03,2024Q3,URBANIZATION,Urbanization share,0.694,proportion
+VR-C-D04-C01,VR-C-D04,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.314,index_0_1
+VR-C-D04-C01,VR-C-D04,2024Q3,URBANIZATION,Urbanization share,0.841,proportion
+VR-C-D04-C02,VR-C-D04,2024Q3,POVERTY_INDEX,Multidimensional poverty index,,index_0_1
+VR-C-D04-C02,VR-C-D04,2024Q3,URBANIZATION,Urbanization share,0.301,proportion
+VR-C-D04-C03,VR-C-D04,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.67,index_0_1
+VR-C-D04-C03,VR-C-D04,2024Q3,URBANIZATION,Urbanization share,0.618,proportion
+VR-S-D01-C01,VR-S-D01,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.7,index_0_1
+VR-S-D01-C01,VR-S-D01,2024Q3,URBANIZATION,Urbanization share,0.242,proportion
+VR-S-D01-C02,VR-S-D01,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.365,index_0_1
+VR-S-D01-C02,VR-S-D01,2024Q3,URBANIZATION,Urbanization share,0.545,proportion
+VR-S-D01-C03,VR-S-D01,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.555,index_0_1
+VR-S-D01-C03,VR-S-D01,2024Q3,URBANIZATION,Urbanization share,0.223,proportion
+VR-S-D02-C01,VR-S-D02,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.527,index_0_1
+VR-S-D02-C01,VR-S-D02,2024Q3,URBANIZATION,Urbanization share,0.558,proportion
+VR-S-D02-C02,VR-S-D02,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.255,index_0_1
+VR-S-D02-C02,VR-S-D02,2024Q3,URBANIZATION,Urbanization share,0.504,proportion
+VR-S-D02-C03,VR-S-D02,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.272,index_0_1
+VR-S-D02-C03,VR-S-D02,2024Q3,URBANIZATION,Urbanization share,0.389,proportion
+VR-S-D03-C01,VR-S-D03,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.62,index_0_1
+VR-S-D03-C01,VR-S-D03,2024Q3,URBANIZATION,Urbanization share,0.107,proportion
+VR-S-D03-C02,VR-S-D03,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.504,index_0_1
+VR-S-D03-C02,VR-S-D03,2024Q3,URBANIZATION,Urbanization share,0.646,proportion
+VR-S-D03-C03,VR-S-D03,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.458,index_0_1
+VR-S-D03-C03,VR-S-D03,2024Q3,URBANIZATION,Urbanization share,0.829,proportion
+VR-S-D04-C01,VR-S-D04,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.175,index_0_1
+VR-S-D04-C01,VR-S-D04,2024Q3,URBANIZATION,Urbanization share,0.254,proportion
+VR-S-D04-C02,VR-S-D04,2024Q3,POVERTY_INDEX,Multidimensional poverty index,,index_0_1
+VR-S-D04-C02,VR-S-D04,2024Q3,URBANIZATION,Urbanization share,0.152,proportion
+VR-S-D04-C03,VR-S-D04,2024Q3,POVERTY_INDEX,Multidimensional poverty index,0.209,index_0_1
+VR-S-D04-C03,VR-S-D04,2024Q3,URBANIZATION,Urbanization share,0.662,proportion
+VR-N-D01-C01,VR-N-D01,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.576,index_0_1
+VR-N-D01-C01,VR-N-D01,2024Q4,URBANIZATION,Urbanization share,0.467,proportion
+VR-N-D01-C02,VR-N-D01,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.468,index_0_1
+VR-N-D01-C02,VR-N-D01,2024Q4,URBANIZATION,Urbanization share,0.282,proportion
+VR-N-D01-C03,VR-N-D01,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.16,index_0_1
+VR-N-D01-C03,VR-N-D01,2024Q4,URBANIZATION,Urbanization share,0.528,proportion
+VR-N-D02-C01,VR-N-D02,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.55,index_0_1
+VR-N-D02-C01,VR-N-D02,2024Q4,URBANIZATION,Urbanization share,0.842,proportion
+VR-N-D02-C02,VR-N-D02,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.586,index_0_1
+VR-N-D02-C02,VR-N-D02,2024Q4,URBANIZATION,Urbanization share,0.416,proportion
+VR-N-D02-C03,VR-N-D02,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.373,index_0_1
+VR-N-D02-C03,VR-N-D02,2024Q4,URBANIZATION,Urbanization share,0.537,proportion
+VR-N-D03-C01,VR-N-D03,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.603,index_0_1
+VR-N-D03-C01,VR-N-D03,2024Q4,URBANIZATION,Urbanization share,0.399,proportion
+VR-N-D03-C02,VR-N-D03,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.153,index_0_1
+VR-N-D03-C02,VR-N-D03,2024Q4,URBANIZATION,Urbanization share,0.53,proportion
+VR-N-D03-C03,VR-N-D03,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.346,index_0_1
+VR-N-D03-C03,VR-N-D03,2024Q4,URBANIZATION,Urbanization share,0.617,proportion
+VR-N-D04-C01,VR-N-D04,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.261,index_0_1
+VR-N-D04-C01,VR-N-D04,2024Q4,URBANIZATION,Urbanization share,0.74,proportion
+VR-N-D04-C02,VR-N-D04,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.413,index_0_1
+VR-N-D04-C02,VR-N-D04,2024Q4,URBANIZATION,Urbanization share,0.333,proportion
+VR-N-D04-C03,VR-N-D04,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.339,index_0_1
+VR-N-D04-C03,VR-N-D04,2024Q4,URBANIZATION,Urbanization share,0.624,proportion
+VR-C-D01-C01,VR-C-D01,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.407,index_0_1
+VR-C-D01-C01,VR-C-D01,2024Q4,URBANIZATION,Urbanization share,0.345,proportion
+VR-C-D01-C02,VR-C-D01,2024Q4,POVERTY_INDEX,Multidimensional poverty index,,index_0_1
+VR-C-D01-C02,VR-C-D01,2024Q4,URBANIZATION,Urbanization share,0.297,proportion
+VR-C-D01-C03,VR-C-D01,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.227,index_0_1
+VR-C-D01-C03,VR-C-D01,2024Q4,URBANIZATION,Urbanization share,0.802,proportion
+VR-C-D02-C01,VR-C-D02,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.25,index_0_1
+VR-C-D02-C01,VR-C-D02,2024Q4,URBANIZATION,Urbanization share,0.773,proportion
+VR-C-D02-C02,VR-C-D02,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.655,index_0_1
+VR-C-D02-C02,VR-C-D02,2024Q4,URBANIZATION,Urbanization share,0.16,proportion
+VR-C-D02-C03,VR-C-D02,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.381,index_0_1
+VR-C-D02-C03,VR-C-D02,2024Q4,URBANIZATION,Urbanization share,0.825,proportion
+VR-C-D03-C01,VR-C-D03,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.592,index_0_1
+VR-C-D03-C01,VR-C-D03,2024Q4,URBANIZATION,Urbanization share,0.279,proportion
+VR-C-D03-C02,VR-C-D03,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.441,index_0_1
+VR-C-D03-C02,VR-C-D03,2024Q4,URBANIZATION,Urbanization share,0.502,proportion
+VR-C-D03-C03,VR-C-D03,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.245,index_0_1
+VR-C-D03-C03,VR-C-D03,2024Q4,URBANIZATION,Urbanization share,0.457,proportion
+VR-C-D04-C01,VR-C-D04,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.569,index_0_1
+VR-C-D04-C01,VR-C-D04,2024Q4,URBANIZATION,Urbanization share,0.387,proportion
+VR-C-D04-C02,VR-C-D04,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.174,index_0_1
+VR-C-D04-C02,VR-C-D04,2024Q4,URBANIZATION,Urbanization share,0.826,proportion
+VR-C-D04-C03,VR-C-D04,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.709,index_0_1
+VR-C-D04-C03,VR-C-D04,2024Q4,URBANIZATION,Urbanization share,0.663,proportion
+VR-S-D01-C01,VR-S-D01,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.46,index_0_1
+VR-S-D01-C01,VR-S-D01,2024Q4,URBANIZATION,Urbanization share,0.623,proportion
+VR-S-D01-C02,VR-S-D01,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.365,index_0_1
+VR-S-D01-C02,VR-S-D01,2024Q4,URBANIZATION,Urbanization share,0.513,proportion
+VR-S-D01-C03,VR-S-D01,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.494,index_0_1
+VR-S-D01-C03,VR-S-D01,2024Q4,URBANIZATION,Urbanization share,0.211,proportion
+VR-S-D02-C01,VR-S-D02,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.257,index_0_1
+VR-S-D02-C01,VR-S-D02,2024Q4,URBANIZATION,Urbanization share,0.674,proportion
+VR-S-D02-C02,VR-S-D02,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.424,index_0_1
+VR-S-D02-C02,VR-S-D02,2024Q4,URBANIZATION,Urbanization share,0.269,proportion
+VR-S-D02-C03,VR-S-D02,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.477,index_0_1
+VR-S-D02-C03,VR-S-D02,2024Q4,URBANIZATION,Urbanization share,0.604,proportion
+VR-S-D03-C01,VR-S-D03,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.253,index_0_1
+VR-S-D03-C01,VR-S-D03,2024Q4,URBANIZATION,Urbanization share,0.579,proportion
+VR-S-D03-C02,VR-S-D03,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.312,index_0_1
+VR-S-D03-C02,VR-S-D03,2024Q4,URBANIZATION,Urbanization share,0.459,proportion
+VR-S-D03-C03,VR-S-D03,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.492,index_0_1
+VR-S-D03-C03,VR-S-D03,2024Q4,URBANIZATION,Urbanization share,0.756,proportion
+VR-S-D04-C01,VR-S-D04,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.345,index_0_1
+VR-S-D04-C01,VR-S-D04,2024Q4,URBANIZATION,Urbanization share,0.572,proportion
+VR-S-D04-C02,VR-S-D04,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.64,index_0_1
+VR-S-D04-C02,VR-S-D04,2024Q4,URBANIZATION,Urbanization share,0.436,proportion
+VR-S-D04-C03,VR-S-D04,2024Q4,POVERTY_INDEX,Multidimensional poverty index,0.172,index_0_1
+VR-S-D04-C03,VR-S-D04,2024Q4,URBANIZATION,Urbanization share,0.503,proportion

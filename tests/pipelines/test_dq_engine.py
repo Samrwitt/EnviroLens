@@ -74,7 +74,7 @@ def test_mark_valid_filters():
     )
     out = mark_valid_environmental(df, {"VR-N-D01"})
     assert len(out) == 1
-    assert out.iloc[0]["is_valid"] is True
+    assert bool(out.iloc[0]["is_valid"]) is True
 
 
 def test_health_unknown_facility():

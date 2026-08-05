@@ -1,0 +1,524 @@
+{
+  "organisationUnits": [
+    {
+      "id": "ou0001",
+      "code": "HF-001",
+      "name": "Community 01 Health Centre",
+      "parent": "VR-N-D01"
+    },
+    {
+      "id": "ou0002",
+      "code": "HF-002",
+      "name": "Community 02 Health Centre",
+      "parent": "VR-N-D01"
+    },
+    {
+      "id": "ou0003",
+      "code": "HF-003",
+      "name": "Community 03 Health Centre",
+      "parent": "VR-N-D01"
+    },
+    {
+      "id": "ou0004",
+      "code": "HF-004",
+      "name": "Community 04 Health Centre",
+      "parent": "VR-N-D02"
+    },
+    {
+      "id": "ou0005",
+      "code": "HF-005",
+      "name": "Community 05 Health Centre",
+      "parent": "VR-N-D02"
+    },
+    {
+      "id": "ou0006",
+      "code": "HF-006",
+      "name": "Community 06 Health Centre",
+      "parent": "VR-N-D02"
+    },
+    {
+      "id": "ou0007",
+      "code": "HF-007",
+      "name": "Community 07 Health Centre",
+      "parent": "VR-N-D03"
+    },
+    {
+      "id": "ou0008",
+      "code": "HF-008",
+      "name": "Community 08 Health Centre",
+      "parent": "VR-N-D03"
+    },
+    {
+      "id": "ou0009",
+      "code": "HF-009",
+      "name": "Community 09 Health Centre",
+      "parent": "VR-N-D03"
+    },
+    {
+      "id": "ou0010",
+      "code": "HF-010",
+      "name": "Community 10 Health Centre",
+      "parent": "VR-N-D04"
+    },
+    {
+      "id": "ou0011",
+      "code": "HF-011",
+      "name": "Community 11 Health Centre",
+      "parent": "VR-N-D04"
+    },
+    {
+      "id": "ou0012",
+      "code": "HF-012",
+      "name": "Community 12 Health Centre",
+      "parent": "VR-N-D04"
+    },
+    {
+      "id": "ou0013",
+      "code": "HF-013",
+      "name": "Community 13 Health Centre",
+      "parent": "VR-C-D01"
+    },
+    {
+      "id": "ou0014",
+      "code": "HF-014",
+      "name": "Community 14 Health Centre",
+      "parent": "VR-C-D01"
+    },
+    {
+      "id": "ou0015",
+      "code": "HF-015",
+      "name": "Community 15 Health Centre",
+      "parent": "VR-C-D01"
+    },
+    {
+      "id": "ou0016",
+      "code": "HF-016",
+      "name": "Community 16 Health Centre",
+      "parent": "VR-C-D02"
+    },
+    {
+      "id": "ou0017",
+      "code": "HF-017",
+      "name": "Community 17 Health Centre",
+      "parent": "VR-C-D02"
+    },
+    {
+      "id": "ou0018",
+      "code": "HF-018",
+      "name": "Community 18 Health Centre",
+      "parent": "VR-C-D02"
+    },
+    {
+      "id": "ou0019",
+      "code": "HF-019",
+      "name": "Community 19 Health Centre",
+      "parent": "VR-C-D03"
+    },
+    {
+      "id": "ou0020",
+      "code": "HF-020",
+      "name": "Community 20 Health Centre",
+      "parent": "VR-C-D03"
+    },
+    {
+      "id": "ou0021",
+      "code": "HF-021",
+      "name": "Community 21 Health Centre",
+      "parent": "VR-C-D03"
+    },
+    {
+      "id": "ou0022",
+      "code": "HF-022",
+      "name": "Community 22 Health Centre",
+      "parent": "VR-C-D04"
+    },
+    {
+      "id": "ou0023",
+      "code": "HF-023",
+      "name": "Community 23 Health Centre",
+      "parent": "VR-C-D04"
+    },
+    {
+      "id": "ou0024",
+      "code": "HF-024",
+      "name": "Community 24 Health Centre",
+      "parent": "VR-C-D04"
+    },
+    {
+      "id": "ou0025",
+      "code": "HF-025",
+      "name": "Community 25 Health Centre",
+      "parent": "VR-S-D01"
+    },
+    {
+      "id": "ou0026",
+      "code": "HF-026",
+      "name": "Community 26 Health Centre",
+      "parent": "VR-S-D01"
+    },
+    {
+      "id": "ou0027",
+      "code": "HF-027",
+      "name": "Community 27 Health Centre",
+      "parent": "VR-S-D01"
+    },
+    {
+      "id": "ou0028",
+      "code": "HF-028",
+      "name": "Community 28 Health Centre",
+      "parent": "VR-S-D02"
+    },
+    {
+      "id": "ou0029",
+      "code": "HF-029",
+      "name": "Community 29 Health Centre",
+      "parent": "VR-S-D02"
+    },
+    {
+      "id": "ou0030",
+      "code": "HF-030",
+      "name": "Community 30 Health Centre",
+      "parent": "VR-S-D02"
+    },
+    {
+      "id": "ou0031",
+      "code": "HF-031",
+      "name": "Community 31 Health Centre",
+      "parent": "VR-S-D03"
+    },
+    {
+      "id": "ou0032",
+      "code": "HF-032",
+      "name": "Community 32 Health Centre",
+      "parent": "VR-S-D03"
+    },
+    {
+      "id": "ou0033",
+      "code": "HF-033",
+      "name": "Community 33 Health Centre",
+      "parent": "VR-S-D03"
+    },
+    {
+      "id": "ou0034",
+      "code": "HF-034",
+      "name": "Community 34 Health Centre",
+      "parent": "VR-S-D04"
+    },
+    {
+      "id": "ou0035",
+      "code": "HF-035",
+      "name": "Community 35 Health Centre",
+      "parent": "VR-S-D04"
+    },
+    {
+      "id": "ou0036",
+      "code": "HF-036",
+      "name": "Community 36 Health Centre",
+      "parent": "VR-S-D04"
+    }
+  ],
+  "dataValueSets": {
+    "dataValues": [
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-001",
+        "value": "15.33"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-002",
+        "value": "33.67"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-003",
+        "value": "38.13"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-004",
+        "value": "27.98"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-005",
+        "value": "33.9"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-006",
+        "value": "37.1"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-007",
+        "value": "32.17"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-008",
+        "value": "25.44"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-009",
+        "value": "27.83"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-010",
+        "value": "31.54"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-011",
+        "value": "31.88"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-UNKNOWN",
+        "value": "35.68"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-013",
+        "value": "26.79"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-014",
+        "value": "21.91"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-015",
+        "value": "8.71"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-016",
+        "value": "42.8"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-017",
+        "value": "25.6"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-018",
+        "value": "18.88"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-019",
+        "value": "32.9"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-020",
+        "value": "13.69"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-021",
+        "value": "13.73"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-022",
+        "value": "15.09"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-023",
+        "value": "35.71"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-024",
+        "value": "14.72"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-025",
+        "value": "27.46"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-026",
+        "value": "20.81"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-027",
+        "value": "18.44"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-028",
+        "value": "19.14"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-029",
+        "value": "12.72"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-030",
+        "value": "31.42"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-031",
+        "value": "19.51"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-032",
+        "value": "12.62"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-033",
+        "value": "33.09"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-034",
+        "value": "8.94"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-035",
+        "value": "14.0"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q1",
+        "orgUnit": "HF-036",
+        "value": "12.16"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-001",
+        "value": "38.33"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-002",
+        "value": "11.74"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-003",
+        "value": "24.6"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-004",
+        "value": "36.66"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-005",
+        "value": "33.9"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-006",
+        "value": "15.55"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-007",
+        "value": "19.76"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-008",
+        "value": "44.37"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-009",
+        "value": "41.75"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-010",
+        "value": "17.08"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-011",
+        "value": "25.96"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-012",
+        "value": "31.32"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-013",
+        "value": "42.49"
+      },
+      {
+        "dataElement": "RESP_ENC_RATE",
+        "period": "2024Q2",
+        "orgUnit": "HF-014",
+        "value": "36.14"
+      }
+    ]
+  }
+}

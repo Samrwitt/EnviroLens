@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: envirolens
+    schema: public
+    tables:
+      - name: vw_risk_analysis
+      - name: vw_executive_overview
+      - name: vw_data_quality

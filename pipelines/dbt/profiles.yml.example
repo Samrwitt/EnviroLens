@@ -1,0 +1,12 @@
+envirolens:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: envirolens
+      password: envirolens
+      port: 5433
+      dbname: envirolens
+      schema: analytics
+      threads: 2

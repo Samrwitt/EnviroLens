@@ -1,0 +1,7 @@
+code,name,source_type,pollutant,district_code,lon,lat,estimated_emission_index
+IND-002,Community 02 Industrial Facility,industrial,NO2,VR-N-D01,31.70317826794818,1.2993695239861593,0.46
+IND-011,Community 11 Industrial Facility,industrial,NO2,VR-N-D04,32.277797360311006,1.8035684444264402,0.56
+IND-021,Community 21 Industrial Facility,quarry,NO2,VR-C-D03,32.32909094121738,0.16471163754247345,0.38
+IND-024,Community 24 Industrial Facility,quarry,NO2,VR-C-D04,32.94685987326574,0.1940175473031045,0.51
+IND-025,Community 25 Industrial Facility,power_plant,PM2.5,VR-S-D01,32.63076816746044,-1.7793589177202296,0.74
+IND-031,Community 31 Industrial Facility,industrial,PM2.5,VR-S-D03,32.64597508227474,-1.2453151320295008,0.42

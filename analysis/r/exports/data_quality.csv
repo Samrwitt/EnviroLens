@@ -1,0 +1,4 @@
+dataset_name,completeness,validity,consistency,timeliness,uniqueness,geographic_accuracy,overall
+environmental_samples,0.9513,0.9813,0.9963,0.95,0.9888,0.9738,0.9736
+health_observations,0.9861,1.0,0.9653,0.8681,0.9861,0.9653,0.9618
+population_estimates,0.9861,0.98,0.97,0.96,1.0,0.99,0.981

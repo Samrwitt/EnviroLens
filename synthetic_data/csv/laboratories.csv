@@ -1,0 +1,13 @@
+code,name,district_code,lon,lat,can_process_respiratory
+LAB-001,Northern District 1 Public Laboratory,VR-N-D01,31.77,1.32,True
+LAB-002,Northern District 2 Public Laboratory,VR-N-D02,32.32,1.32,True
+LAB-003,Northern District 3 Public Laboratory,VR-N-D03,31.77,1.77,True
+LAB-004,Northern District 4 Public Laboratory,VR-N-D04,32.32,1.77,True
+LAB-005,Central District 1 Public Laboratory,VR-C-D01,32.27,-0.18000000000000002,True
+LAB-006,Central District 2 Public Laboratory,VR-C-D02,32.82,-0.18000000000000002,True
+LAB-007,Central District 3 Public Laboratory,VR-C-D03,32.27,0.27,True
+LAB-008,Central District 4 Public Laboratory,VR-C-D04,32.82,0.27,True
+LAB-009,Southern District 1 Public Laboratory,VR-S-D01,32.77,-1.68,True
+LAB-010,Southern District 2 Public Laboratory,VR-S-D02,33.32,-1.68,True
+LAB-011,Southern District 3 Public Laboratory,VR-S-D03,32.77,-1.23,True
+LAB-012,Southern District 4 Public Laboratory,VR-S-D04,33.32,-1.23,True

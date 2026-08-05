@@ -8,6 +8,7 @@ Create Date: 2026-08-05
 from alembic import op
 import sqlalchemy as sa
 from geoalchemy2 import Geometry
+from sqlalchemy.dialects import postgresql
 
 revision = "001_initial"
 down_revision = None
@@ -19,11 +20,18 @@ def upgrade() -> None:
     op.execute("CREATE EXTENSION IF NOT EXISTS postgis")
     op.execute('CREATE EXTENSION IF NOT EXISTS "uuid-ossp"')
 
-    admin_level = sa.Enum("country", "region", "district", "community", name="adminlevel")
-    sensitivity = sa.Enum(
-        "public", "internal", "restricted", "confidential", name="sensitivitylevel"
+    admin_level = postgresql.ENUM(
+        "country", "region", "district", "community", name="adminlevel", create_type=False
     )
-    dq_dim = sa.Enum(
+    sensitivity = postgresql.ENUM(
+        "public",
+        "internal",
+        "restricted",
+        "confidential",
+        name="sensitivitylevel",
+        create_type=False,
+    )
+    dq_dim = postgresql.ENUM(
         "completeness",
         "validity",
         "consistency",
@@ -31,12 +39,14 @@ def upgrade() -> None:
         "uniqueness",
         "geographic_accuracy",
         name="dqdimension",
+        create_type=False,
     )
-    user_role = sa.Enum("admin", "analyst", "viewer", "data_steward", name="userrole")
-    admin_level.create(op.get_bind(), checkfirst=True)
-    sensitivity.create(op.get_bind(), checkfirst=True)
-    dq_dim.create(op.get_bind(), checkfirst=True)
-    user_role.create(op.get_bind(), checkfirst=True)
+    user_role = postgresql.ENUM(
+        "admin", "analyst", "viewer", "data_steward", name="userrole", create_type=False
+    )
+    bind = op.get_bind()
+    for enum_t in (admin_level, sensitivity, dq_dim, user_role):
+        enum_t.create(bind, checkfirst=True)
 
     op.create_table(
         "administrative_areas",

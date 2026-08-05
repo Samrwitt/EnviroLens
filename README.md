@@ -15,10 +15,12 @@ pip install -r requirements.txt
 python -m synthetic_data.generators.generate_all
 alembic upgrade head
 python -m pipelines.run --all
+python -m analysis.risk_model.calculate
+python -m database.views.apply_views
 uvicorn api.main:app --reload
 ```
 
-OpenAPI docs: http://localhost:8000/docs
+PostGIS is published on **5433** and Redis on **6380** by default (to avoid clashing with local services). OpenAPI docs: http://localhost:8000/docs
 
 API key header: `X-API-Key: dev-api-key-change-me`
 
