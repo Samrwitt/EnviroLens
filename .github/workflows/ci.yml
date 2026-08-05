@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgis/postgis:16-3.4
+        env:
+          POSTGRES_USER: envirolens
+          POSTGRES_PASSWORD: envirolens
+          POSTGRES_DB: envirolens
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U envirolens -d envirolens"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      DATABASE_URL: postgresql+psycopg://envirolens:envirolens@localhost:5432/envirolens
+      API_KEY: dev-api-key-change-me
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install system libs
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gdal-bin libgdal-dev libpq-dev
+      - name: Install Python deps
+        run: pip install -r requirements.txt
+      - name: Lint
+        run: ruff check api pipelines database analysis integrations synthetic_data tests || true
+      - name: Generate synthetic data
+        run: python -m synthetic_data.generators.generate_all
+      - name: Migrate
+        run: alembic upgrade head
+      - name: Unit tests
+        run: pytest -q tests/pipelines tests/data_quality tests/api
+      - name: Pipeline + risk (integration)
+        run: |
+          python -m pipelines.run --all
+          python -m analysis.risk_model.calculate
+          python -m database.views.apply_views

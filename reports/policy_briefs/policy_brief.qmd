@@ -1,0 +1,40 @@
+---
+title: "EnviroLens Policy Brief"
+subtitle: "Air pollution and community health risk in Verdania"
+format:
+  html:
+    toc: false
+execute:
+  eval: false
+---
+
+# Main findings
+
+EnviroLens integrates ambient air quality, respiratory health facility reports, and community vulnerability data for Verdania. The Air Pollution Environmental-Health Risk Index (AP-EHRI) highlights communities where elevated PM2.5, higher respiratory encounter rates, industrial proximity, and social vulnerability coincide.
+
+# Highest-risk areas
+
+Communities classified as **high** or **very high** risk concentrate where monitoring shows persistently elevated PM2.5 and where access to laboratory-capable facilities is limited. District roll-ups from `vw_risk_analysis` should guide surveillance planning.
+
+# Vulnerable populations
+
+Children under five and adults aged 65+ living in high-risk communities represent the priority population for protective messaging and enhanced clinical readiness for respiratory illness.
+
+# Major data gaps
+
+- Incomplete facility submissions and late reporting in selected districts
+- Inconsistent measurement units and invalid geographic codes in environmental feeds
+- Missing population totals for a small share of communities
+
+# Recommended actions
+
+1. Intensify ambient monitoring and industrial inspection in very-high AP-EHRI communities
+2. Strengthen facility reporting timeliness through HIS feedback loops
+3. Target outreach to vulnerable age groups in high-risk districts
+4. Commission follow-up environmental sampling near priority exposure sources
+
+# Priority investigation areas
+
+Use the interactive risk map and Power BI **Risk Analysis** page filtered to the latest quarter. Pair geographic hotspots with DQ findings before allocating field resources.
+
+*This brief uses synthetic aggregate data for demonstration. Risk scores are not medical diagnoses.*

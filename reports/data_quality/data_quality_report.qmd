@@ -1,0 +1,44 @@
+---
+title: "EnviroLens Data Quality Report"
+subtitle: "Feedback for contributing institutions — Verdania MVP"
+format:
+  html:
+    toc: true
+execute:
+  eval: false
+---
+
+# Summary
+
+Automated checks evaluate completeness, validity, consistency, timeliness, uniqueness, and geographic accuracy for each inbound dataset. Scores are stored in `data_quality_scores` and issues in `data_quality_issues`.
+
+# Common findings
+
+## Environmental samples (VEPA)
+
+- Missing pollutant values
+- Unexpected units (e.g., ppm instead of µg/m³)
+- Extreme outliers
+- Invalid district codes
+- Duplicate site–period–pollutant rows
+
+## Health observations (Ministry of Health)
+
+- Unknown facility codes
+- Late reporting dates after period close
+- Missing indicator values
+
+## Population / SES (Statistics Office)
+
+- Missing total population for selected communities
+
+# Recommended corrections
+
+1. Enforce controlled vocabularies for units and geographic codes at source
+2. Reject or quarantine outliers before national consolidation
+3. Align facility master lists with the national organisation-unit hierarchy
+4. Submit facility aggregates within two weeks of period close
+
+# Facility-level completeness
+
+Analysts can join `health_observations` to `health_facilities` and compare expected versus received facility–period combinations for the latest quarter.

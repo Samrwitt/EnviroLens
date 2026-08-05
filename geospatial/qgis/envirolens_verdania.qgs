@@ -1,0 +1,10 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis projectname="EnviroLens Verdania" version="3.28.0">
+  <title>EnviroLens Verdania Air Pollution Risk</title>
+  <layer-tree-group>
+    <layer-tree-layer name="verdania_admin" source="./../boundaries/verdania_admin.geojson"/>
+    <layer-tree-layer name="exposure_sources" source="./../boundaries/exposure_sources.geojson"/>
+    <layer-tree-layer name="facilities" source="./../boundaries/facilities.geojson"/>
+    <layer-tree-layer name="monitoring_sites" source="./../boundaries/monitoring_sites.geojson"/>
+  </layer-tree-group>
+</qgis>

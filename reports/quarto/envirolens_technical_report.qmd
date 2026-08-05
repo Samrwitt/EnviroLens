@@ -1,0 +1,68 @@
+---
+title: "EnviroLens Technical Report"
+subtitle: "Air Pollution Environmental-Health Risk — Verdania MVP"
+author: "EnviroLens Analytics"
+date: today
+format:
+  html:
+    toc: true
+    code-fold: true
+execute:
+  echo: true
+  warning: false
+---
+
+# Purpose
+
+This reproducible report documents the Verdania MVP methodology for integrating ambient air-quality measurements, facility respiratory aggregates, and community vulnerability data into the **AP-EHRI** risk index.
+
+# Datasets
+
+Three core datasets are integrated:
+
+1. Environmental air-quality samples (PM2.5, NO₂)
+2. Facility respiratory encounter rates
+3. Population and socioeconomic indicators
+
+See `metadata/data_dictionary/dictionary.md` and `metadata/data_inventory/catalogue.yaml`.
+
+# Data quality
+
+```{r}
+#| label: dq
+#| eval: false
+source("../../analysis/r/analysis_helpers.R")
+data <- load_exports("../../analysis/r/exports")
+data$dq
+```
+
+When exports are available, overall DQ scores are summarized by dataset and dimension (completeness, validity, consistency, timeliness, uniqueness, geographic accuracy).
+
+# Statistical analysis
+
+Analyses include descriptive statistics of PM2.5 and respiratory rates, district comparisons, Pearson correlation between PM2.5 and respiratory encounter rates, and a simple linear regression.
+
+```{r}
+#| label: corr
+#| eval: false
+ct <- correlate_pm_resp(data$env, data$health)
+print(ct)
+fit <- simple_regression(data$env, data$health)
+print(summary(fit))
+```
+
+# Risk index
+
+AP-EHRI combines normalized PM2.5, respiratory rates, industrial proximity, vulnerability, poverty, access gaps, and reporting incompleteness. Weights and limitations are documented in `analysis/risk_model/README.md`.
+
+# Limitations
+
+- Synthetic geography and outcomes
+- Respiratory encounters are not etiologically specific to air pollution
+- Risk scores support prioritization, not clinical diagnosis
+
+# Recommendations
+
+1. Prioritize high / very-high AP-EHRI communities for targeted air monitoring
+2. Investigate late-reporting facilities flagged by the DQ engine
+3. Expand industrial emission inventories for proximity modelling
