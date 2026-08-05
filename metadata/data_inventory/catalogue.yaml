@@ -1,0 +1,46 @@
+# Verdania MVP data source inventory
+
+- dataset_name: Environmental Air Quality Samples
+  owning_institution: Verdania Environmental Protection Agency (VEPA)
+  ministry_or_department: Ministry of Environment
+  geographic_coverage: National (all regions)
+  reporting_frequency: Quarterly
+  available_variables: site_code, pollutant, value, unit, sample_date, period_code
+  data_format: CSV / Excel
+  sensitivity_level: internal
+  access_method: file drop / API
+  data_steward: National Air Quality Coordinator
+  data_quality_status: monitored
+  last_update_date: 2024-12-31
+  sharing_restrictions: Aggregate public; site microdata internal
+  description: Ambient PM2.5 and NO2 measurements from community monitoring sites.
+
+- dataset_name: Facility Respiratory Health Aggregates
+  owning_institution: Verdania Ministry of Health
+  ministry_or_department: Department of Epidemiology
+  geographic_coverage: National
+  reporting_frequency: Quarterly
+  available_variables: facility_code, indicator_code, value, population_at_risk, age_group, reported_at
+  data_format: CSV / JSON / DHIS2
+  sensitivity_level: restricted
+  access_method: DHIS2 mock / file
+  data_steward: HIS Manager
+  data_quality_status: monitored
+  last_update_date: 2024-12-31
+  sharing_restrictions: Facility aggregates only; no patient-level data
+  description: Facility-level respiratory encounter rates per 1,000 catchment population.
+
+- dataset_name: Community Population and Socioeconomic Indicators
+  owning_institution: Verdania National Statistics Office
+  ministry_or_department: Ministry of Planning
+  geographic_coverage: National (community)
+  reporting_frequency: Quarterly estimates
+  available_variables: total_population, under5, elderly_65plus, poverty_index, urbanization
+  data_format: CSV
+  sensitivity_level: public
+  access_method: open data portal (simulated)
+  data_steward: Census Data Manager
+  data_quality_status: good
+  last_update_date: 2024-12-31
+  sharing_restrictions: Public aggregate statistics
+  description: Population structure and multidimensional poverty for vulnerability scoring.

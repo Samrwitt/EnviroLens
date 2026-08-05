@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "envirolens"
+version = "0.1.0"
+description = "Integrated Environmental Health Data and Risk Intelligence Platform"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "EnviroLens Contributors" }]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["api*", "pipelines*", "database*", "analysis*", "integrations*", "synthetic_data*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

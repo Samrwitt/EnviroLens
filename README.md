@@ -1,102 +1,76 @@
 # EnviroLens
 
-### Environmental Health Data Integration and Risk Surveillance Platform
+### Integrated Environmental Health Data and Risk Intelligence Platform
 
-EnviroLens is a data platform designed to help public-health organizations combine environmental, health, demographic, socioeconomic, and geospatial data in one system.
+EnviroLens integrates environmental, health, demographic, socioeconomic, and geospatial datasets to help governments and health organizations identify high-risk communities, evaluate data quality, monitor trends, and make evidence-based decisions.
 
-The platform transforms fragmented datasets into reliable indicators, interactive dashboards, geographic risk maps, and automated reports that can support evidence-based public-health planning.
+**MVP use case:** ambient air pollution (PM2.5 / NO₂) and respiratory health risk in the fictional country **Verdania**.
 
-## What It Does
+## Quick Start
 
-EnviroLens can:
+```bash
+cp .env.example .env
+docker compose up -d db redis
+pip install -r requirements.txt
+python -m synthetic_data.generators.generate_all
+alembic upgrade head
+python -m pipelines.run --all
+uvicorn api.main:app --reload
+```
 
-* Import data from CSV, Excel, APIs, and relational databases
-* Clean, validate, and standardize datasets from different institutions
-* Integrate health, environmental, population, and geographic data
-* Detect missing, duplicated, inconsistent, and invalid records
-* Calculate transparent environmental-health risk indicators
-* Identify high-risk communities using spatial analysis
-* Visualize findings through Power BI dashboards and QGIS maps
-* Generate reproducible analytical reports for technical and policy audiences
-* Simulate integration with national health-information systems such as DHIS2
+OpenAPI docs: http://localhost:8000/docs
 
-## Example Use Case
-
-The initial implementation combines environmental measurements, health-facility records, population data, administrative boundaries, and potential pollution-source locations.
-
-EnviroLens uses these datasets to answer questions such as:
-
-* Which communities may face the highest environmental-health risk?
-* How many vulnerable people live in those areas?
-* Which health facilities or laboratories have incomplete reporting?
-* Where should surveillance, environmental sampling, or public-health interventions be prioritized?
-
-The platform is designed to support different environmental-health topics, including air pollution, water contamination, lead exposure, occupational hazards, and respiratory illness.
+API key header: `X-API-Key: dev-api-key-change-me`
 
 ## Technology Stack
 
-**Data Engineering and APIs**
+| Layer | Tools |
+|-------|--------|
+| Backend | FastAPI, Pydantic, SQLAlchemy, Alembic |
+| Data engineering | Pandas, Prefect, OpenPyXL, Great Expectations patterns |
+| Database | PostgreSQL, PostGIS, Redis |
+| Analysis | R (tidyverse, ggplot2, sf), Quarto |
+| Geospatial | GeoPandas, Shapely, PostGIS, QGIS, Leaflet/Folium |
+| Dashboards | Power BI (SQL views), optional web |
+| Integration | Mock DHIS2 connector |
+| Infra | Docker Compose, GitHub Actions |
 
-* Python * FastAPI * Pandas * SQLAlchemy
+## Repository Layout
 
-**Statistical Analysis and Reporting**
-
-* R * Quarto * Tidyverse * ggplot2
-
-**Database and Geospatial Processing**
-
-* PostgreSQL * PostGIS * SQL * GeoPandas * QGIS
-
-**Visualization**
-
-* Power BI * Interactive geographic dashboards
-
-**Infrastructure**
-
-* Docker * GitHub Actions * AWS
-
-## Main Components
-
-### Data Integration Pipeline
-
-Python pipelines import, clean, validate, standardize, and load data from multiple sources into PostgreSQL.
-
-### Data Quality Engine
-
-The platform evaluates completeness, validity, consistency, timeliness, and duplicate records across datasets.
-
-### Environmental Health Risk Model
-
-EnviroLens calculates explainable geographic risk scores using environmental exposure, health indicators, population vulnerability, access to services, and data-quality information.
-
-### Geospatial Analysis
-
-PostGIS, GeoPandas, and QGIS are used to create hotspot maps, exposure-source proximity analysis, population-at-risk estimates, and health-service accessibility maps.
-
-### Analytics and Reporting
-
-R and Quarto generate reproducible statistical reports, while Power BI provides interactive dashboards for analysts, health officials, and policymakers.
-
-### FastAPI Backend
-
-The API provides access to health indicators, environmental measurements, geographic risk scores, metadata, data-quality results, and generated reports.
-
-## High-Level Workflow
-
-```text
-Health, Environmental and Population Data
-                    |
-                    v
-        Python Validation and ETL
-                    |
-                    v
-          PostgreSQL and PostGIS
-             /              \
-            v                v
-      FastAPI Services    R Analysis
-            |                |
-            v                v
-     Power BI and QGIS   Quarto Reports
+```
+envirolens/
+├── api/                 # FastAPI backend
+├── pipelines/           # ETL, validation, DQ, loading
+├── database/            # Models, migrations, views, seed
+├── analysis/            # Python risk model, R scripts, indicators
+├── geospatial/          # Boundaries, maps, QGIS, spatial SQL
+├── dashboards/          # Power BI connection docs + views
+├── reports/             # Quarto technical, policy, DQ reports
+├── metadata/            # Inventory, dictionary, indicator registry
+├── integrations/        # Mock DHIS2
+├── synthetic_data/      # Generators + CSV/GeoJSON outputs
+├── tests/
+├── docs/
+└── training/
 ```
 
+## MVP Features
 
+1. Metadata catalogue for dataset ownership and quality status
+2. Automated Python ETL with intentional DQ defect detection
+3. Data-quality scores (completeness, validity, consistency, timeliness, uniqueness, geographic accuracy)
+4. PostgreSQL + PostGIS relational/spatial schema
+5. Transparent **AP-EHRI** (Air Pollution Environmental-Health Risk Index)
+6. R epidemiological analysis + Quarto reports
+7. GeoPandas / PostGIS maps and QGIS project
+8. FastAPI with auth stub, pagination, OpenAPI
+9. Mock DHIS2 org-unit and aggregate sync
+10. Power BI–ready SQL views
+
+## Privacy
+
+All data is **synthetic and aggregated**. No personally identifiable health information is included. Risk scores support public-health planning and are not medical diagnoses.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
