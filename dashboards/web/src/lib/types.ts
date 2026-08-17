@@ -100,6 +100,33 @@ export interface DashboardAnalytics {
   facility_types: { type: string; count: number }[];
   lab_access: { label: string; count: number }[];
   district_risk: { district: string; mean_score: number; elevated: number }[];
+  explorer: ExplorerCommunity[];
+  default_weights: Record<string, number>;
+  sensitivity: {
+    dropped: string;
+    label: string;
+    mean_rank_shift: number;
+    top5_retention: number;
+  }[];
+  insights: { eyebrow: string; title: string; detail: string }[];
+}
+
+export interface ExplorerCommunity {
+  community: string;
+  community_code: string;
+  district: string;
+  score: number;
+  band: string;
+  pm25: number;
+  resp: number;
+  prox: number;
+  vuln: number;
+  pov: number;
+  access: number;
+  incomplete: number;
+  population: number;
+  vulnerable: number;
+  has_lab: boolean;
 }
 
 export interface DataQuality {

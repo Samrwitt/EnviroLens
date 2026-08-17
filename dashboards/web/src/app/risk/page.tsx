@@ -5,6 +5,7 @@ import {
   DistrictRiskBars,
   HistogramChart,
   HorizontalBars,
+  SensitivityBars,
   StackedBandChart,
 } from "@/components/charts/Charts";
 import { DataTable } from "@/components/DataTable";
@@ -53,6 +54,15 @@ export default async function RiskPage() {
           </ChartCard>
           <ChartCard title="District mean AP-EHRI" subtitle={period}>
             <DistrictRiskBars data={data.district_risk} />
+          </ChartCard>
+        </div>
+
+        <div className="mt-6">
+          <ChartCard
+            title="Sensitivity: drop one component"
+            subtitle="How much community ranks move when a weight is set to zero (others re-normalized). High rank shift = that factor is driving the league table."
+          >
+            <SensitivityBars data={data.sensitivity ?? []} />
           </ChartCard>
         </div>
 

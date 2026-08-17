@@ -338,3 +338,29 @@ export function DistrictRiskBars({
     </ResponsiveContainer>
   );
 }
+
+export function SensitivityBars({
+  data,
+}: {
+  data: { label: string; mean_rank_shift: number; top5_retention: number }[];
+}) {
+  const chart = data.map((d) => ({
+    label: d.label,
+    "Mean rank shift": d.mean_rank_shift,
+    "Top-5 retained": Math.round(d.top5_retention * 100),
+  }));
+  return (
+    <ResponsiveContainer width="100%" height={300}>
+      <BarChart data={chart}>
+        <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+        <XAxis dataKey="label" tick={{ fontSize: 10 }} interval={0} />
+        <YAxis yAxisId="left" tick={{ fontSize: 11 }} />
+        <YAxis yAxisId="right" orientation="right" domain={[0, 100]} tick={{ fontSize: 11 }} unit="%" />
+        <Tooltip contentStyle={tooltipStyle} />
+        <Legend />
+        <Bar yAxisId="left" dataKey="Mean rank shift" fill="#4f46e5" radius={[4, 4, 0, 0]} />
+        <Bar yAxisId="right" dataKey="Top-5 retained" fill="#059669" radius={[4, 4, 0, 0]} />
+      </BarChart>
+    </ResponsiveContainer>
+  );
+}

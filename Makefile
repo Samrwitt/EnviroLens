@@ -43,6 +43,7 @@ api:
 
 maps:
 	python -m geospatial.generate_maps
+	python scripts/export_readme_figures.py
 
 reports:
 	cd reports/quarto && quarto render envirolens_technical_report.qmd

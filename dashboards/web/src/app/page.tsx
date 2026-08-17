@@ -7,6 +7,7 @@ import {
   PollutionHealthTrend,
   RiskBandDonut,
 } from "@/components/charts/Charts";
+import { InsightGrid } from "@/components/InsightGrid";
 import { KpiCard } from "@/components/KpiCard";
 import { PageHeader } from "@/components/PageHeader";
 import { RiskBandBadge } from "@/components/RiskBandBadge";
@@ -22,10 +23,42 @@ export default async function OverviewPage() {
 
     return (
       <div>
-        <PageHeader
-          title="Environmental Health Intelligence"
-          description={`Verdania air-pollution risk dashboard. KPIs and charts use ${period} unless a trend is shown. AP-EHRI supports public-health prioritization, not clinical diagnosis.`}
-        />
+        <section className="mb-8 overflow-hidden rounded-2xl border border-emerald-900/10 bg-gradient-to-br from-brand-900 via-emerald-900 to-slate-900 px-6 py-8 text-white shadow-lg sm:px-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-200">
+            Verdania · {period}
+          </p>
+          <h1 className="mt-2 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
+            Where air pollution, health burden, and vulnerability coincide
+          </h1>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-emerald-100/90">
+            EnviroLens fuses ambient PM2.5/NO₂, facility respiratory reports, and community
+            socioeconomic data into a transparent AP-EHRI index. Use it to prioritize surveillance —
+            not to diagnose patients.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link
+              href="/explorer"
+              className="rounded-lg bg-white px-4 py-2 text-sm font-semibold text-brand-900 hover:bg-emerald-50"
+            >
+              Open weight lab
+            </Link>
+            <Link
+              href="/map"
+              className="rounded-lg border border-white/30 px-4 py-2 text-sm font-semibold text-white hover:bg-white/10"
+            >
+              View risk map
+            </Link>
+          </div>
+        </section>
+
+        {data.insights?.length > 0 && (
+          <div className="mb-8">
+            <h2 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500">
+              Analyst briefing
+            </h2>
+            <InsightGrid insights={data.insights} />
+          </div>
+        )}
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4">
           <KpiCard

@@ -6,10 +6,11 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "Overview" },
   { href: "/risk", label: "Risk Analysis" },
+  { href: "/explorer", label: "Weight Lab" },
   { href: "/data-quality", label: "Data Quality" },
   { href: "/facilities", label: "Health System" },
-  { href: "/metadata", label: "Metadata" },
   { href: "/map", label: "Map" },
+  { href: "/metadata", label: "Metadata" },
 ];
 
 export function Nav() {

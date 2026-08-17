@@ -1,12 +1,103 @@
 # EnviroLens
 
-### Integrated Environmental Health Data and Risk Intelligence Platform
+**Integrated environmental-health intelligence** — from messy multi-source data to a transparent geographic risk index, maps, and an analyst dashboard.
 
-EnviroLens integrates environmental, health, demographic, socioeconomic, and geospatial datasets to help governments and health organizations identify high-risk communities, evaluate data quality, monitor trends, and make evidence-based decisions.
+The MVP answers a real planning question for the fictional country **Verdania**:
 
-**MVP use case:** ambient air pollution (PM2.5 / NO₂) and respiratory health risk in the fictional country **Verdania**.
+> Which communities face the highest air-pollution-related health risk, how many vulnerable people live there, and where is the evidence too weak to act?
 
-## Quick Start
+All records are **synthetic aggregates**. No patient-level data. Risk scores support public-health prioritization, not diagnosis.
+
+<p align="center">
+  <img src="docs/images/risk_choropleth.png" alt="Verdania community AP-EHRI choropleth" width="520" />
+</p>
+<p align="center"><em>Community-level Air Pollution Environmental-Health Risk Index (AP-EHRI)</em></p>
+
+## Analyst briefing (what the dashboard says)
+
+The Overview page writes a live briefing from the warehouse: high-risk population, hottest community, weakest district, **PM2.5 vs the WHO 2021 annual guideline (5 µg/m³)**, high-risk places with **no lab access**, and the weakest data feed.
+
+| Risk mix | Highest-risk communities |
+|:--------:|:------------------------:|
+| ![AP-EHRI bands](docs/images/risk_bands.png) | ![Top communities](docs/images/top_communities.png) |
+
+| Pollution vs health | Data quality |
+|:-------------------:|:------------:|
+| ![PM2.5, NO2, respiratory trend](docs/images/pollution_health_trend.png) | ![DQ dimensions](docs/images/data_quality.png) |
+
+## Weight lab and sensitivity (the “wow”)
+
+AP-EHRI is a **documented weighted sum**, not a black box.
+
+- **Weight lab** (`/explorer`) — drag sliders (PM2.5, respiratory burden, proximity, vulnerability, poverty, access, reporting gaps). Community ranks update instantly. Published PostgreSQL scores stay on methodology v1.0.
+- **Sensitivity** — drop one component, re-normalize the rest, measure mean rank shift and top-5 retention.
+
+![Leave-one-out sensitivity](docs/images/sensitivity.png)
+
+**Interview line:** *I didn’t just plot PM2.5. I built a transparent index, showed how rankings move if policy weights change, and flagged where high risk meets missing lab access and weak reporting.*
+
+## Geospatial intelligence
+
+PostGIS distances, GeoPandas exports, Folium, and a QGIS project.
+
+| Exposure sources | Health facilities |
+|:----------------:|:-----------------:|
+| ![Industrial exposure sources](docs/images/exposure_sources.png) | ![Facility locations](docs/images/facility_access.png) |
+
+## What a reviewer should notice
+
+| Capability | Why it matters |
+|------------|----------------|
+| Intentional dirty data + DQ engine | Missing values, bad geo codes, unit errors, duplicates, late reports |
+| Transparent **AP-EHRI** | Weights, min-max normalization, missing-data rules, limitations |
+| **Weight lab** | Live re-ranking without overwriting the warehouse |
+| **Sensitivity analysis** | Rank shift when each component is dropped |
+| PostGIS + GeoPandas maps | Proximity, choropleths, Folium, QGIS |
+| FastAPI + Next.js | Queryable indicators, OpenAPI, chart-driven UI |
+| R / Quarto path | Reproducible epidemiological reporting |
+
+## Demo path (3 minutes)
+
+1. Start PostGIS and run the pipeline (commands below)
+2. **Overview** — briefing cards (WHO multiple, lab-access gaps)
+3. **Weight lab** — raise poverty, watch ranks move
+4. **Risk** — histogram, component radar, leave-one-out sensitivity
+5. **Map** — choropleth + industrial sources + facilities
+
+Dashboard: http://localhost:3001 · API: http://localhost:8000/docs  
+Header: `X-API-Key: dev-api-key-change-me`
+
+## AP-EHRI (v1.0)
+
+```
+AP-EHRI = 0.25·PM2.5 + 0.20·respiratory + 0.15·proximity
+        + 0.15·vulnerability + 0.10·poverty + 0.10·access gap
+        + 0.05·incompleteness
+```
+
+Components are min-max normalized within each reporting period.
+
+Bands: low &lt; 0.35 · moderate · high ≥ 0.55 · very high ≥ 0.75.
+
+Details: [`analysis/risk_model/README.md`](analysis/risk_model/README.md) · [`metadata/indicator_registry/indicators.md`](metadata/indicator_registry/indicators.md)
+
+## Architecture
+
+```text
+Synthetic CSV / Excel / JSON / mock DHIS2
+        │
+        ▼
+Python ETL + validation + DQ scores  (Prefect entrypoint)
+        │
+        ▼
+PostgreSQL + PostGIS
+        │
+        ├── FastAPI  →  Next.js analytics UI  →  Power BI views
+        ├── Python AP-EHRI + spatial joins
+        └── R / Quarto reports
+```
+
+## Quick start
 
 ```bash
 cp .env.example .env
@@ -17,70 +108,28 @@ alembic upgrade head
 python -m pipelines.run --all
 python -m analysis.risk_model.calculate
 python -m database.views.apply_views
+python -m geospatial.generate_maps
+bash scripts/copy_web_maps.sh
+python scripts/export_readme_figures.py
 uvicorn api.main:app --reload
+```
 
-# Web dashboard (separate terminal)
+```bash
 cd dashboards/web && cp .env.local.example .env.local && npm install && npm run dev
 ```
 
-PostGIS is published on **5433** and Redis on **6380** by default (to avoid clashing with local services).
+PostGIS **5433** · Redis **6380** · API **8000** · Web **3001**
 
-- API docs: http://localhost:8000/docs
-- Web dashboard: http://localhost:3001
+Refresh README figures after a new pipeline run: `python scripts/export_readme_figures.py`
 
-API key header: `X-API-Key: dev-api-key-change-me`
+## Stack
 
-## Technology Stack
-
-| Layer | Tools |
-|-------|--------|
-| Backend | FastAPI, Pydantic, SQLAlchemy, Alembic |
-| Data engineering | Pandas, Prefect, OpenPyXL, Great Expectations patterns |
-| Database | PostgreSQL, PostGIS, Redis |
-| Analysis | R (tidyverse, ggplot2, sf), Quarto |
-| Geospatial | GeoPandas, Shapely, PostGIS, QGIS, Leaflet/Folium |
-| Dashboards | **Next.js (React)**, Power BI (SQL views) |
-| Integration | Mock DHIS2 connector |
-| Infra | Docker Compose, GitHub Actions |
-
-## Repository Layout
-
-```
-envirolens/
-├── api/                 # FastAPI backend
-├── pipelines/           # ETL, validation, DQ, loading
-├── database/            # Models, migrations, views, seed
-├── analysis/            # Python risk model, R scripts, indicators
-├── geospatial/          # Boundaries, maps, QGIS, spatial SQL
-├── dashboards/
-│   ├── powerbi/
-│   └── web/             # Next.js React dashboard
-├── reports/             # Quarto technical, policy, DQ reports
-├── metadata/            # Inventory, dictionary, indicator registry
-├── integrations/        # Mock DHIS2
-├── synthetic_data/      # Generators + CSV/GeoJSON outputs
-├── tests/
-├── docs/
-└── training/
-```
-
-## MVP Features
-
-1. Metadata catalogue for dataset ownership and quality status
-2. Automated Python ETL with intentional DQ defect detection
-3. Data-quality scores (completeness, validity, consistency, timeliness, uniqueness, geographic accuracy)
-4. PostgreSQL + PostGIS relational/spatial schema
-5. Transparent **AP-EHRI** (Air Pollution Environmental-Health Risk Index)
-6. R epidemiological analysis + Quarto reports
-7. GeoPandas / PostGIS maps and QGIS project
-8. FastAPI with auth stub, pagination, OpenAPI
-9. Mock DHIS2 org-unit and aggregate sync
-10. Power BI–ready SQL views
+Python · FastAPI · SQLAlchemy · Alembic · Pandas · Prefect · PostgreSQL/PostGIS · GeoPandas · R/Quarto · Next.js · Recharts · Docker · GitHub Actions · mock DHIS2
 
 ## Privacy
 
-All data is **synthetic and aggregated**. No personally identifiable health information is included. Risk scores support public-health planning and are not medical diagnoses.
+Synthetic, aggregated, no PII. See [`docs/data_governance.md`](docs/data_governance.md).
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — [LICENSE](LICENSE)

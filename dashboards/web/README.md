@@ -35,7 +35,7 @@ Open http://localhost:3001 (or set `PORT` in `.env.local`)
 | Route | Content |
 |-------|---------|
 | `/` | Executive overview KPIs **and charts** (risk mix, trends, quality) |
-| `/risk` | AP-EHRI rankings, histogram, radar, district bars |
+| `/explorer` | Interactive AP-EHRI weight laboratory |
 | `/data-quality` | DQ dimension scores and progress bars |
 | `/facilities` | Health facility capacity |
 | `/metadata` | Dataset catalogue |
