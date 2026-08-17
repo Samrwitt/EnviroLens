@@ -12,7 +12,8 @@ help:
 	@echo "  make api       - Run FastAPI locally"
 	@echo "  make maps      - Generate geospatial map exports"
 	@echo "  make reports   - Render Quarto reports (requires Quarto + R)"
-	@echo "  make test      - Run pytest"
+	@echo "  make web       - Run Next.js dashboard (port 3001)"
+	@echo "  make web-maps  - Copy geospatial exports to web public/"
 	@echo "  make lint      - Run ruff"
 
 up:
@@ -50,6 +51,15 @@ reports:
 
 bootstrap:
 	bash scripts/bootstrap.sh
+
+web:
+	cd dashboards/web && npm run dev
+
+web-install:
+	cd dashboards/web && npm install
+
+web-maps:
+	bash scripts/copy_web_maps.sh
 
 test:
 	PYTHONPATH=. pytest -q

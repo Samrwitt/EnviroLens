@@ -53,7 +53,7 @@ def health():
 @router.get("/regions", response_model=Page[RegionOut])
 def list_regions(
     page: int = Query(1, ge=1),
-    page_size: int = Query(50, ge=1, le=200),
+    page_size: int = Query(50, ge=1, le=500),
     db: Session = Depends(get_db),
     _: Principal = Depends(get_principal),
 ):
@@ -71,7 +71,7 @@ def list_regions(
 def list_districts(
     region_code: str | None = None,
     page: int = Query(1, ge=1),
-    page_size: int = Query(50, ge=1, le=200),
+    page_size: int = Query(50, ge=1, le=500),
     db: Session = Depends(get_db),
     _: Principal = Depends(get_principal),
 ):
@@ -99,7 +99,7 @@ def list_districts(
 @router.get("/facilities", response_model=Page[FacilityOut])
 def list_facilities(
     page: int = Query(1, ge=1),
-    page_size: int = Query(50, ge=1, le=200),
+    page_size: int = Query(50, ge=1, le=500),
     db: Session = Depends(get_db),
     _: Principal = Depends(get_principal),
 ):
@@ -112,7 +112,7 @@ def list_facilities(
 def list_samples(
     pollutant: str | None = None,
     page: int = Query(1, ge=1),
-    page_size: int = Query(50, ge=1, le=200),
+    page_size: int = Query(50, ge=1, le=500),
     db: Session = Depends(get_db),
     _: Principal = Depends(get_principal),
 ):
@@ -126,7 +126,7 @@ def list_samples(
 @router.get("/health-indicators", response_model=Page[HealthIndicatorOut])
 def list_health(
     page: int = Query(1, ge=1),
-    page_size: int = Query(50, ge=1, le=200),
+    page_size: int = Query(50, ge=1, le=500),
     db: Session = Depends(get_db),
     _: Principal = Depends(get_principal),
 ):
@@ -139,7 +139,7 @@ def list_health(
 def list_risk(
     risk_band: str | None = None,
     page: int = Query(1, ge=1),
-    page_size: int = Query(50, ge=1, le=200),
+    page_size: int = Query(50, ge=1, le=500),
     db: Session = Depends(get_db),
     _: Principal = Depends(get_principal),
 ):
@@ -153,7 +153,7 @@ def list_risk(
 @router.get("/data-quality", response_model=Page[DataQualityOut])
 def list_dq(
     page: int = Query(1, ge=1),
-    page_size: int = Query(50, ge=1, le=200),
+    page_size: int = Query(50, ge=1, le=500),
     db: Session = Depends(get_db),
     _: Principal = Depends(get_principal),
 ):
@@ -165,7 +165,7 @@ def list_dq(
 @router.get("/metadata", response_model=Page[MetadataOut])
 def list_metadata(
     page: int = Query(1, ge=1),
-    page_size: int = Query(50, ge=1, le=200),
+    page_size: int = Query(50, ge=1, le=500),
     db: Session = Depends(get_db),
     _: Principal = Depends(get_principal),
 ):

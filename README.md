@@ -18,9 +18,15 @@ python -m pipelines.run --all
 python -m analysis.risk_model.calculate
 python -m database.views.apply_views
 uvicorn api.main:app --reload
+
+# Web dashboard (separate terminal)
+cd dashboards/web && cp .env.local.example .env.local && npm install && npm run dev
 ```
 
-PostGIS is published on **5433** and Redis on **6380** by default (to avoid clashing with local services). OpenAPI docs: http://localhost:8000/docs
+PostGIS is published on **5433** and Redis on **6380** by default (to avoid clashing with local services).
+
+- API docs: http://localhost:8000/docs
+- Web dashboard: http://localhost:3001
 
 API key header: `X-API-Key: dev-api-key-change-me`
 
@@ -33,7 +39,7 @@ API key header: `X-API-Key: dev-api-key-change-me`
 | Database | PostgreSQL, PostGIS, Redis |
 | Analysis | R (tidyverse, ggplot2, sf), Quarto |
 | Geospatial | GeoPandas, Shapely, PostGIS, QGIS, Leaflet/Folium |
-| Dashboards | Power BI (SQL views), optional web |
+| Dashboards | **Next.js (React)**, Power BI (SQL views) |
 | Integration | Mock DHIS2 connector |
 | Infra | Docker Compose, GitHub Actions |
 
@@ -46,7 +52,9 @@ envirolens/
 ├── database/            # Models, migrations, views, seed
 ├── analysis/            # Python risk model, R scripts, indicators
 ├── geospatial/          # Boundaries, maps, QGIS, spatial SQL
-├── dashboards/          # Power BI connection docs + views
+├── dashboards/
+│   ├── powerbi/
+│   └── web/             # Next.js React dashboard
 ├── reports/             # Quarto technical, policy, DQ reports
 ├── metadata/            # Inventory, dictionary, indicator registry
 ├── integrations/        # Mock DHIS2

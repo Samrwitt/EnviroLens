@@ -41,6 +41,10 @@ local_data/
 # Docker volumes
 pgdata/
 
+# Next.js
+dashboards/web/node_modules/
+dashboards/web/.next/
+
 # Generated exports (keep maps placeholders)
 *.gpkg
 !geospatial/boundaries/*.geojson

@@ -13,4 +13,6 @@ python -m analysis.risk_model.calculate
 python -m database.views.apply_views
 python -m analysis.r.export_for_r || true
 python -m geospatial.generate_maps || true
+bash scripts/copy_web_maps.sh || true
 echo "Bootstrap complete. Start API with: make api"
+echo "Start web UI with: make web"
