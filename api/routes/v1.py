@@ -24,14 +24,17 @@ from api.schemas.common import (
 )
 from api.services.audit import write_audit
 from api.services.auth import Principal, get_principal, require_roles
+from api.services.analytics import dashboard_payload
 from database.models.entities import (
     AdminLevel,
     AdministrativeArea,
+    Community,
     DataQualityScore,
     DataSource,
     EnvironmentalSample,
     HealthFacility,
     HealthObservation,
+    ReportingPeriod,
     RiskIndicator,
 )
 from database.session import get_db
@@ -143,11 +146,53 @@ def list_risk(
     db: Session = Depends(get_db),
     _: Principal = Depends(get_principal),
 ):
-    q = select(RiskIndicator)
+    total_q = select(func.count()).select_from(RiskIndicator)
     if risk_band:
-        q = q.where(RiskIndicator.risk_band == risk_band)
-    total, items = paginate(q, db, page, page_size)
+        total_q = total_q.where(RiskIndicator.risk_band == risk_band)
+    total = db.scalar(total_q) or 0
+    stmt = (
+        select(RiskIndicator, Community, AdministrativeArea, ReportingPeriod)
+        .join(Community, Community.id == RiskIndicator.community_id)
+        .join(AdministrativeArea, AdministrativeArea.id == Community.admin_area_id)
+        .join(ReportingPeriod, ReportingPeriod.id == RiskIndicator.period_id)
+        .order_by(RiskIndicator.score.desc())
+        .offset((page - 1) * page_size)
+        .limit(page_size)
+    )
+    if risk_band:
+        stmt = stmt.where(RiskIndicator.risk_band == risk_band)
+    rows = db.execute(stmt).all()
+    items = [
+        RiskScoreOut(
+            id=ri.id,
+            community_id=ri.community_id,
+            period_id=ri.period_id,
+            index_code=ri.index_code,
+            score=ri.score,
+            risk_band=ri.risk_band,
+            methodology_version=ri.methodology_version,
+            community_code=community.code,
+            community_name=community.name,
+            district_name=district.name,
+            period_code=period.code,
+            pm25_component=ri.pm25_component,
+            respiratory_component=ri.respiratory_component,
+            proximity_component=ri.proximity_component,
+            vulnerability_component=ri.vulnerability_component,
+            poverty_component=ri.poverty_component,
+            access_component=ri.access_component,
+        )
+        for ri, community, district, period in rows
+    ]
     return Page(items=items, total=total, page=page, page_size=page_size)
+
+
+@router.get("/analytics/dashboard")
+def analytics_dashboard(
+    db: Session = Depends(get_db),
+    _: Principal = Depends(get_principal),
+):
+    return dashboard_payload(db)
 
 
 @router.get("/data-quality", response_model=Page[DataQualityOut])

@@ -17,7 +17,7 @@ export function Nav() {
 
   return (
     <header className="border-b border-brand-800/20 bg-brand-900 text-white shadow-lg">
-      <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <div className="mx-auto flex max-w-[1400px] flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <div>
           <Link href="/" className="text-xl font-semibold tracking-tight">
             EnviroLens

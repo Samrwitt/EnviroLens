@@ -26,3 +26,13 @@ export function avg(values: number[]): number {
   if (values.length === 0) return 0;
   return values.reduce((a, b) => a + b, 0) / values.length;
 }
+
+export function formatNumber(value: number): string {
+  return new Intl.NumberFormat("en-US").format(Math.round(value));
+}
+
+export function formatCompact(value: number): string {
+  return new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 }).format(
+    value,
+  );
+}

@@ -70,6 +70,16 @@ class RiskScoreOut(BaseModel):
     score: float
     risk_band: str
     methodology_version: str
+    community_code: Optional[str] = None
+    community_name: Optional[str] = None
+    district_name: Optional[str] = None
+    period_code: Optional[str] = None
+    pm25_component: Optional[float] = None
+    respiratory_component: Optional[float] = None
+    proximity_component: Optional[float] = None
+    vulnerability_component: Optional[float] = None
+    poverty_component: Optional[float] = None
+    access_component: Optional[float] = None
 
 
 class DataQualityOut(BaseModel):

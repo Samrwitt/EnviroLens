@@ -1,4 +1,5 @@
 import type {
+  DashboardAnalytics,
   DataQuality,
   District,
   Facility,
@@ -77,6 +78,8 @@ export const api = {
     fetchApi<Page<HealthIndicator>>(
       `/api/v1/health-indicators?page=${page}&page_size=${pageSize}`,
     ),
+
+  dashboard: () => fetchApi<DashboardAnalytics>("/api/v1/analytics/dashboard"),
 };
 
 export { ApiError };

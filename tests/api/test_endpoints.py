@@ -35,6 +35,11 @@ def test_reports_with_auth():
     assert len(r.json()) >= 3
 
 
+def test_analytics_requires_auth():
+    r = client.get("/api/v1/analytics/dashboard")
+    assert r.status_code == 401
+
+
 def test_dhis2_org_units_without_payload():
     # May 404 if synth not generated; either is acceptable for unit smoke
     r = client.get("/dhis2/api/organisationUnits")

@@ -2,13 +2,14 @@ interface KpiCardProps {
   label: string;
   value: string | number;
   hint?: string;
-  accent?: "default" | "warning" | "success";
+  accent?: "default" | "warning" | "success" | "info";
 }
 
 const accents = {
   default: "border-l-brand-500",
   warning: "border-l-orange-500",
   success: "border-l-emerald-500",
+  info: "border-l-indigo-500",
 };
 
 export function KpiCard({ label, value, hint, accent = "default" }: KpiCardProps) {

@@ -1,51 +1,89 @@
+import { ChartCard } from "@/components/charts/ChartCard";
+import { DistrictRiskBars } from "@/components/charts/Charts";
 import { PageHeader } from "@/components/PageHeader";
+import { api } from "@/lib/api";
 import Image from "next/image";
 
-export default function MapPage() {
+export default async function MapPage() {
+  let districts: { district: string; mean_score: number; elevated: number }[] = [];
+  try {
+    const data = await api.dashboard();
+    districts = data.district_risk;
+  } catch {
+    districts = [];
+  }
+
   return (
     <div>
       <PageHeader
         title="Geographic Risk Map"
-        description="Community-level AP-EHRI visualization and exposure-source overlays. Generate maps with python -m geospatial.generate_maps."
+        description="Spatial view of AP-EHRI, industrial exposure sources, and health-facility coverage. Static layers are GeoPandas exports; the interactive map is Folium."
       />
 
-      <div className="grid gap-8 lg:grid-cols-2">
-        <section className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-          <div className="border-b border-slate-200 px-4 py-3">
-            <h2 className="font-semibold text-slate-900">Risk choropleth</h2>
-            <p className="text-sm text-slate-500">Static export from GeoPandas</p>
-          </div>
-          <div className="relative aspect-[4/5] w-full bg-slate-100">
-            <Image
-              src="/maps/risk_choropleth.png"
-              alt="Verdania community AP-EHRI risk choropleth"
-              fill
-              className="object-contain p-2"
-              unoptimized
-            />
-          </div>
-        </section>
+      {districts.length > 0 && (
+        <div className="mb-8">
+          <ChartCard title="District mean AP-EHRI" subtitle="Latest reporting period">
+            <DistrictRiskBars data={districts} />
+          </ChartCard>
+        </div>
+      )}
 
-        <section className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
-          <div className="border-b border-slate-200 px-4 py-3">
-            <h2 className="font-semibold text-slate-900">Interactive map</h2>
-            <p className="text-sm text-slate-500">Folium HTML export (iframe)</p>
-          </div>
+      <div className="grid gap-6 lg:grid-cols-2">
+        <MapPanel title="Risk choropleth" caption="Community AP-EHRI (YlOrRd)">
+          <Image
+            src="/maps/risk_choropleth.png"
+            alt="Verdania community AP-EHRI risk choropleth"
+            fill
+            className="object-contain p-2"
+            unoptimized
+          />
+        </MapPanel>
+        <MapPanel title="Interactive map" caption="Folium overlay of risk polygons and sources">
           <iframe
             title="Verdania interactive risk map"
             src="/maps/interactive_risk_map.html"
-            className="h-[480px] w-full border-0"
+            className="h-full min-h-[420px] w-full border-0"
           />
-        </section>
+        </MapPanel>
+        <MapPanel title="Exposure sources" caption="Industrial / power / quarry sites">
+          <Image
+            src="/maps/exposure_sources.png"
+            alt="Industrial exposure sources in Verdania"
+            fill
+            className="object-contain p-2"
+            unoptimized
+          />
+        </MapPanel>
+        <MapPanel title="Health facilities" caption="Clinic and hospital locations">
+          <Image
+            src="/maps/facility_access.png"
+            alt="Health facility distribution"
+            fill
+            className="object-contain p-2"
+            unoptimized
+          />
+        </MapPanel>
       </div>
-
-      <p className="mt-6 text-sm text-slate-500">
-        Map assets are copied from <code className="rounded bg-slate-100 px-1">geospatial/maps/</code>{" "}
-        into <code className="rounded bg-slate-100 px-1">public/maps/</code> when you run{" "}
-        <code className="rounded bg-slate-100 px-1">make web-maps</code> or the bootstrap script.
-        For advanced GIS workflows, use the QGIS project under{" "}
-        <code className="rounded bg-slate-100 px-1">geospatial/qgis/</code>.
-      </p>
     </div>
+  );
+}
+
+function MapPanel({
+  title,
+  caption,
+  children,
+}: {
+  title: string;
+  caption: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <section className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+      <div className="border-b border-slate-200 px-4 py-3">
+        <h2 className="text-sm font-semibold text-slate-900">{title}</h2>
+        <p className="text-xs text-slate-500">{caption}</p>
+      </div>
+      <div className="relative aspect-[4/5] w-full bg-slate-50">{children}</div>
+    </section>
   );
 }

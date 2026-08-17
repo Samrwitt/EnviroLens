@@ -34,9 +34,9 @@ Open http://localhost:3001 (or set `PORT` in `.env.local`)
 
 | Route | Content |
 |-------|---------|
-| `/` | Executive overview KPIs |
-| `/risk` | AP-EHRI community rankings |
-| `/data-quality` | DQ dimension scores |
+| `/` | Executive overview KPIs **and charts** (risk mix, trends, quality) |
+| `/risk` | AP-EHRI rankings, histogram, radar, district bars |
+| `/data-quality` | DQ dimension scores and progress bars |
 | `/facilities` | Health facility capacity |
 | `/metadata` | Dataset catalogue |
 | `/map` | Choropleth + interactive Folium map |
